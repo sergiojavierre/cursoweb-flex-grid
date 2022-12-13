@@ -1,0 +1,60 @@
+:root{
+    --relleno: 15px;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: grid;
+    grid-template-areas: 
+    'navegacion navegacion'
+    'lateral principal'
+    'lateral pie';
+    grid-template-columns: 25% 75%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: red;
+    padding: var(--relleno);
+    grid-area: navegacion;
+}
+
+aside {
+    background: yellow;
+    grid-area: lateral;
+}
+
+main {
+    background: green;
+    grid-area: principal;
+}
+
+footer {
+    background: blue;
+    grid-area: pie;
+}
+
+nav * {
+    color: white;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: yellow;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
